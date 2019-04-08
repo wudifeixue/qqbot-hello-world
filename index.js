@@ -4,6 +4,7 @@ const { CQWebSocket, CQAt } = require('cq-websocket')
 const config = {
   host: '', // ws的api地址，例如: api.example.com，这里不需要ws://
   port: 5031, // 我使用的websocket端口，你可以看情况更改
+  accessToken: '', // 设置好API token，文档https://cqhttp.cc/docs/4.9/#/Configuration
   adminQQ: 123456789, // 这里输入一个私聊qq好友号码来做提醒，请改成你自己的
   groups: [1234, 4567], // QQ群设定返还信息
 }
@@ -11,6 +12,7 @@ const config = {
 const bot = new CQWebSocket({
   host: config.host,
   port: config.port,
+  accessToken: config.accessToken,
 })
 
 // bot监听信息

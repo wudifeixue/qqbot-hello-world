@@ -8,13 +8,17 @@
 在这里我只展示一下最基本的连接API，如何发送私有消息，以及监听群消息的方法。我相信作为初学者项目是越简单越好，接下来你们想多写东西，就一步步看文档吧。先看node-cq-websocket的文档，有什么不明白了就去看CoolQ HTTP API插件的文档。  
 
 ## 如何开启自己项目和使用
-```js
-// 首先更改index.js里面的配置
-npm install
-node index.js
+```
+git clone https://github.com/wudifeixue/qqbot-hello-world.git qqbot
+cd qqbot  
+```
+更改index.js里面的配置
+```
+npm install  
+node index.js  
 ```
 
-## 正式部署
+## 正式部署此应用
 推荐使用pm2  
 `npm install pm2 -g`  
 `pm2 start index.js --name "qqbot"`  
@@ -28,10 +32,17 @@ node index.js
 
 其他命令请参考[pm2文档](https://pm2.io/doc/en/runtime/quick-start/)  
 
+## 完整部署
+首先安装酷Q并且登陆QQ,需要图片功能必须安装Pro版  
+然后给酷Q安装CoolQ HTTP API插件  
+配置好插件接口  
+配置好并再运行此程序  
+
 ## 项目依赖
 [酷Q](https://cqp.cc/)  
 [CoolQ HTTP API 插件](https://github.com/richardchien/coolq-http-api)  
 [node-cq-websocket](https://github.com/momocow/node-cq-websocket)
 
 ## 其他基础依赖
+安装[git](https://git-scm.com/)  
 安装新版[nodejs](https://nodejs.org/en/)(我只测试过10+)  
